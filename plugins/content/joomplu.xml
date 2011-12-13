@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" method="upgrade">
+  <name>Content - JoomGallery insert image</name>
+  <author>JoomGallery::ProjectTeam</author>
+  <creationDate>10.03.2011</creationDate>
+  <copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>team@joomgallery.net</authorEmail>
+  <authorUrl>www.joomgallery.net</authorUrl>
+  <version>1.5 BETA6</version>
+  <description>Shows images from JoomGallery in content articles</description>
+  <files>
+    <filename plugin="joomplu">joomplu.php</filename>
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB.plg_content_joomplu.ini</language>
+    <language tag="de-DE">de-DE.plg_content_joomplu.ini</language>
+  </languages>
+  <params>
+    <param name="openimage" type="list" default="default" label="JCP_OPENIMAGE" description="JCP_OPENIMAGE_DESCRIPTION">
+      <option value="default">JCP_OPENIMAGE_LIKE_IN_JOOMGALLERY</option>
+      <option value="0">JCP_OPENIMAGE_NORMAL</option>
+      <option value="1">JCP_OPENIMAGE_BLANK_WINDOW</option>
+      <option value="2">JCP_OPENIMAGE_JS_WINDOW</option>
+      <option value="3">JCP_OPENIMAGE_DHTML</option>
+      <option value="5">JCP_OPENIMAGE_THICKBOX3</option>
+      <option value="6">JCP_OPENIMAGE_SLIMBOX</option>
+    </param>
+    <param name="spacer" type="spacer" />
+    <param name="upload_enabled" type="radio" default="1" label="JCP_UPLOAD_ENABLED" description="JCP_UPLOAD_ENABLED_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="upload_catids" type="text" default="" label="JCP_UPLOAD_CATEGORIES" description="JCP_UPLOAD_CATEGORIES_DESCRIPTION" />
+    <param name="create_category" type="radio" default="1" label="JCP_CREATE_CATEGORY" description="JCP_CREATE_CATEGORY_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="parent_catids" type="text" default="" label="JCP_PARENT_CATEGORIES" description="JCP_PARENT_CATEGORIES_DESCRIPTION" />
+    <param name="spacer" type="spacer" />
+    <param name="showhidden" type="radio" default="1" label="JCP_SHOW_HIDDEN" description="JCP_SHOW_HIDDEN_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="spacer" type="spacer" />
+    <param name="use_gallery_styles" type="radio" default="0" label="JCP_USE_GALLERY_STYLES" description="JCP_USE_GALLERY_STYLES_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="spacer" type="spacer" />
+    <param name="msg" type="radio" default="1" label="JCP_MSG" description="JCP_MSG_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="msg_to" type="text" default="" label="JCP_MSG_TO" description="JCP_MSG_TO_DESCRIPTION" />
+  </params>
+  <params group="advanced">
+    <param name="spacer" type="spacer" default="JCP_DEFAULT_DESCRIPTION" />
+    <param name="default_type" type="list" default="thumb" label="JCP_DEFAULT_TYPE" description="JCP_DEFAULT_TYPE_DESCRIPTION">
+      <option value="thumb">JCP_THUMBNAIL</option>
+      <option value="img">JCP_DETAIL</option>
+      <option value="orig">JCP_ORIGINAL</option>
+    </param>
+    <param name="default_linked" type="list" default="1" label="JCP_DEFAULT_LINKED" description="JCP_DEFAULT_LINKED_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">JCP_DETAIL_VIEW</option>
+      <option value="2">JCP_CATEGORY_VIEW</option>
+      <option value="3">JCP_READMORE_VIEW</option>
+    </param>
+    <param name="default_linked_type" type="list" default="img" label="JCP_DEFAULT_LINKED_TYPE" description="JCP_DEFAULT_LINKED_TYPE_DESCRIPTION">
+      <option value="img">JCP_DETAIL</option>
+      <option value="orig">JCP_ORIGINAL</option>
+    </param>
+    <param name="default_alttext" type="text" default="" label="JCP_DEFAULT_ALTTEXT" description="JCP_DEFAULT_ALTTEXT_DESCRIPTION" />
+    <param name="default_class" type="text" default="" label="JCP_DEFAULT_CLASS" description="JCP_DEFAULT_CLASS_DESCRIPTION" />
+    <param name="default_linkedtext" type="text" default="" label="JCP_DEFAULT_LINKEDTEXT" description="JCP_DEFAULT_LINKEDTEXT_DESCRIPTION" />
+    <param name="spacer" type="spacer" />
+    <param name="default_category_mode" type="radio" default="0" label="JCP_DEFAULT_CATEGORY_MODE" description="JCP_DEFAULT_CATEGORY_MODE_DESCRIPTION">
+      <option value="0">JCP_DEFAULT_CATEGORY_MODE_THUMBNAILS</option>
+      <option value="1">JCP_DEFAULT_CATEGORY_MODE_TEXTLINK</option>
+    </param>
+    <param name="default_category_limit" type="text" default="4" label="JCP_DEFAULT_CATEGORY_LIMIT" description="JCP_DEFAULT_CATEGORY_LIMIT_DESCRIPTION" />
+    <param name="default_category_columns" type="text" default="2" label="JCP_DEFAULT_CATEGORY_COLUMNS" description="JCP_DEFAULT_CATEGORY_COLUMNS_DESCRIPTION" />
+    <param name="default_category_ordering" type="list" default="0" label="JCP_DEFAULT_CATEGORY_ORDERING" description="JCP_DEFAULT_CATEGORY_ORDERING_DESCRIPTION">
+      <option value="0">JCP_DEFAULT_CATEGORY_ORDERING_ORDERING</option>
+      <option value="1">JCP_DEFAULT_CATEGORY_ORDERING_RANDOM</option>
+    </param>
+    <param name="default_category_linkedtext" type="text" default="" label="JCP_DEFAULT_CATEGORY_LINKEDTEXT" description="JCP_DEFAULT_CATEGORY_LINKEDTEXT_DESCRIPTION" />
+    <param name="spacer" type="spacer" />
+    <param name="additional_settings" type="textarea" rows="6" cols="20" default="" label="JCP_ADDITIONAL_SETTINGS" description="JCP_ADDITIONAL_SETTINGS_DESCRIPTION" />
+  </params>
+</install>
